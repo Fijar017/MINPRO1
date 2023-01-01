@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootsrap Icon Font-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!--Icon web-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <title>JARFLIX</title>
+</head>
+<body>
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg fixed-top" style="height: 70px;">
+    <div class="container-fluid">
+        <div class="brand">
+            <a class="navbar-brand" href="index.html"> <img class="img-fluid logo" src="img/logo.png"
+                alt="jarflix" /> </a>
+        </div>
+        <ul class="navigation">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Movies</a></li>
+            <li><a href="/">Tv Show</a></li>
+            <li><a href="/contactus.html">Contact Us</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+          <input type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+      <ul class="user">
+        <li><img src="img/user.jpg" alt=" ... "/></li>
+    </ul>
+  </nav>
+
+<!--SLIDER-->
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/slider1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+          <a class="play" onclick="toggleVideoON();"><img src="node_modules/bootstrap-icons/icons/play-circle.svg">Watch Trailer</a> 
+          
+          <div class="content">
+          <h5>KINGSMAN</h5>
+          <span>2023</span>
+          <span><i>17+</i></span>
+          <span>1h 45min</span>
+          <span>Action</span>
+          
+          <p>Seorang veteran agen rahasia merekrut remaja untuk dilatih menjadi agen rahasia hebat.</p>
+
+          <div class="buttons">
+            <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+          </div>
+         </div>
+
+          <div class="trailer">
+            <video src="/video/Kingsman.mp4" controls="true"></video>
+            <img src="/node_modules/bootstrap-icons/icons/x-square.svg" class="close" onclick="toggleVideoOFF();">
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/slider2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+          <a class="play"><img src="node_modules/bootstrap-icons/icons/play-circle.svg">Watch Trailer</a>
+
+          <div class="content">
+            <h5>DAHMER</h5>
+          <span>2023</span>
+          <span><i>17+</i></span>
+          <span>1h 45min</span>
+          <span>Action</span>
+            <p>Some representative placeholder content for the first slide.</p>
+            <div class="buttons">
+              <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+              <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+           </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/slider3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+          <a class="play"><img src="node_modules/bootstrap-icons/icons/play-circle.svg">Watch Trailer</a>
+
+          <div class="content">
+            <h5>FIFTY SHADES</h5>
+          <span>2023</span>
+          <span><i>17+</i></span>
+          <span>1h 45min</span>
+          <span>Action</span>
+            <p>Some representative placeholder content for the first slide.</p>
+            <div class="buttons">
+              <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+              <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--CARD-->
+
+  <div class="judul">
+    <h6>Latest Movies</h6>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 col-md-3">
+        <div class="card">
+            <img src="img/ironman.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Iron Man</h5>
+
+ <!-- Button trigger modal -->
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  More
+</button>
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Iron Man</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/ironman.jpg" class="card-img-top" alt="..." style="width: 470px;" height="200px">
+        <br>
+        <br>
+        <p>Dalam kunjungannya, Toni Stark tertangkap dan disandera oleh militan Afghanistan. Di dalam goa, diam-diam ia membangun sebuah senjata lapis baja anti peluru untuk melawan musuh dan meloloskan diri.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Play</button>
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+    </div>
+   </div>
+
+   <div class="col-md-2 col-md-3">
+    <div class="card">
+        <img src="img/captainamerica.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Captain America</h5>
+          <a href="#" class="btn btn-primary">More</a>
+        </div>
+</div>
+</div>
+
+<div class="col-md-2 col-md-3">
+  <div class="card">
+      <img src="img/avengers.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Avengers</h5>
+        <a href="#" class="btn btn-primary">More</a>
+      </div>
+</div>
+</div>
+
+<div class="col-md-2 col-md-3">
+  <div class="card">
+      <img src="img/hulk.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Hulk</h5>
+        <a href="#" class="btn btn-primary">More</a>
+      </div>
+</div>
+
+</div>
+</div>
+
+<div class="judul">
+  <h6>Upcoming Movies</h6>
+</div>
+
+<div class="row">
+  <div class="col-md-2 col-md-3">
+    <div class="card">
+        <img src="img/money heist.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <a href="#" class="btn btn-primary">More</a>
+        </div>
+</div>
+</div>
+
+<div class="col-md-2 col-md-3">
+  <div class="card">
+      <img src="img/money heist.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <a href="#" class="btn btn-primary">More</a>
+      </div>
+</div>
+</div>
+
+<div class="col-md-2 col-md-3">
+  <div class="card">
+      <img src="img/money heist.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <a href="#" class="btn btn-primary">More</a>
+      </div>
+</div>
+</div>
+
+<div class="col-md-2 col-md-3">
+  <div class="card">
+      <img src="img/money heist.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <a href="#" class="btn btn-primary">More</a>
+      </div>
+</div>
+</div>
+</div>
+
+<!--MODAL CARD-->
+
+  <!--FOOTER-->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<footer>
+  <ul class="social_icon">
+    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+    <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+  </ul>
+  <ul class="menu">
+<li><a href="#">Home</a></li>
+<li><a href="#">Movies</a></li>
+<li><a href="#">Tv Show</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+  </ul>
+  <p>@2022 JARFLIX | All Right Reserved. Copyright by Muhammad Fijar Pratama </p>
+</footer>
+
+<!--SCRIPT-->
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="navslide.js"></script>
+</body>
+</html>
